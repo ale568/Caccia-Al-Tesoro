@@ -1,0 +1,19 @@
+.difficulty-card {
+  border: 2px solid transparent !important;
+  border-radius: 16px !important;
+  background-color: #ffffff !important;
+  color: var(--nav-bg) !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.difficulty-card:hover {
+  transform: translateY(-5px) !important;
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+  background-color: #eef6f6 !important;
+}
+
+.difficulty-card:active {
+  transform: translateY(0) !important;
+}
