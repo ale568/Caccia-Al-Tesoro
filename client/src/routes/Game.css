@@ -1,0 +1,124 @@
+/* --- Game Layout --- */
+.game-layout {
+  height: calc(100vh - 110px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dashboard-card {
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.clue-title {
+  color: #5c5f6c;
+  font-weight: 800;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.clue-text {
+  color: var(--nav-bg);
+  font-style: italic;
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.timer-card {
+  background-color: #f8fcfc;
+  border-color: var(--accent-color);
+  padding: 5px 80px;
+}
+
+.timer-icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 8px;
+}
+
+.timer-text {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--nav-bg);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.places-text-btn {
+  background: transparent;
+  border: none;
+  color: var(--nav-bg);
+  font-weight: 900;
+  font-size: 1.3rem;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.places-text-btn:hover {
+  color: var(--accent-color);
+}
+
+/* --- Mappa --- */
+.map-card-wrapper {
+  position: relative;
+  width: 100%;
+  flex-grow: 1;
+  background-image: url('/full-map.png');
+  background-size: cover;
+  background-position: center;
+  border: 4px solid var(--nav-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+/* Stile per i luoghi rivelati */
+.map-pin {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none; 
+  animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.pin-icon {
+  filter: drop-shadow(0 4px 4px rgba(0,0,0,0.3));
+  display: flex; 
+  justify-content: center;
+}
+
+
+.pin-icon img {
+  width: 50px;
+  height: auto;
+  display: block;
+}
+
+.pin-label {
+  background-color: var(--nav-bg);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  margin-top: -8px;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+@keyframes popIn {
+  0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+  100% { transform: translate(-50%, -100%) scale(1); opacity: 1; }
+}
