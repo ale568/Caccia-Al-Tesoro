@@ -1,0 +1,61 @@
+/* --- Login/Logout --- */
+.btn-aura {
+  background-color: var(--accent-color) !important;
+  color: var(--nav-bg) !important;
+  border: none !important;
+  
+  /* Testo */
+  font-weight: 900 !important;
+  font-size: 0.7rem !important; 
+  
+  /* Altezza */
+  padding: 0 70px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center; 
+  height: 55px;
+  
+  /* Onda */
+  animation: fast-aura 1.0s linear infinite; 
+}
+
+/* Animazione onda */
+@keyframes fast-aura {
+  0% {
+    box-shadow: 
+      0 0 0 0 rgba(174, 210, 210, 1),     
+      0 0 0 15px rgba(174, 210, 210, 0.4); /* Onda esterna in dissolvenza */
+  }
+  100% {
+    box-shadow: 
+      0 0 0 15px rgba(174, 210, 210, 0.4), /* Si raccorda con l'onda sopra */
+      0 0 0 30px rgba(174, 210, 210, 0);   /* Svanisce del tutto */
+  }
+}
+
+/* --- Gioca --- */
+.nav-text-btn {
+  color: var(--nav-text) !important;
+  background-color: transparent !important; 
+  border: none !important;
+  
+  font-weight: 900 !important;
+  font-size: 0.8rem !important;
+  text-transform: uppercase;
+  
+  padding: 8px 16px !important;
+  transition: color 0.3s ease;
+}
+
+.nav-text-btn:hover {
+  color: var(--accent-color) !important; 
+}
+
+/* --- Testo di benvenuto --- */
+.nav-welcome-text {
+  color: var(--nav-text);
+  font-size: 1.0rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-right: 80px;
+}
