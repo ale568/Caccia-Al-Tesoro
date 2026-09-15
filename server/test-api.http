@@ -1,0 +1,48 @@
+@baseUrl = http://localhost:3001/api
+
+### --- AUTENTICAZIONE ---
+
+### Esegue il Login
+# @name login
+POST {{baseUrl}}/sessions
+Content-Type: application/json
+
+{
+  "username": "Beatrice", 
+  "password": "webapp" 
+}
+
+### Verifica Utente Corrente
+GET {{baseUrl}}/sessions/current
+
+### Esegue il Logout
+DELETE {{baseUrl}}/sessions/current
+
+
+### --- GESTIONE PARTITA ---
+
+### Avvia una nuova partita
+# @name createGame
+POST {{baseUrl}}/games
+Content-Type: application/json
+
+{
+  "difficulty": "Facile"
+}
+
+### Recupera Dettagli della Partita in Corso
+GET {{baseUrl}}/games/ID_PARTITA
+
+### Invia un tentativo per l'indizio corrente
+POST {{baseUrl}}/games/ID_PARTITA/answers
+Content-Type: application/json
+
+{
+  "placeId": #N
+}
+
+
+### --- CLASSIFICA ---
+
+### Recupera la Classifica Generale
+GET {{baseUrl}}/leaderboard
