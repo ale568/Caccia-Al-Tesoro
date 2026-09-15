@@ -1,0 +1,62 @@
+/* Variabili globali */
+:root {
+  --nav-bg: #0c1663;
+  --nav-text: #ffffff;
+  --accent-color: #aed2d2;
+  --page-bg: #fffbf3;
+}
+
+body {
+  background-color: var(--page-bg);
+  min-height: 100vh;
+  margin: 0;
+}
+
+.page-title {
+  color: var(--accent-color);
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.page-subtitle {
+  color: var(--nav-bg);
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+
+/* --- Overlay centrale luoghi --- */
+.places-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4); 
+  backdrop-filter: blur(4px);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.places-modal {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.place-grid-btn {
+  color: var(--nav-bg);
+  border: 2px solid var(--nav-bg);
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+.place-grid-btn:hover {
+  background-color: var(--nav-bg);
+  color: #ffffff;
+}
